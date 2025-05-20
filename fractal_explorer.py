@@ -8,13 +8,16 @@ class FractalExplorer:
     def __init__(self):
         self.width = 600
         self.height = 400
-        self.max_iter = tk.IntVar(value=100)
-        self.fractal_type = tk.StringVar(value="Mandelbrot")
+
+        # Create the root window before instantiating Tkinter variables
+        self.root = tk.Tk()
+
+        self.max_iter = tk.IntVar(master=self.root, value=100)
+        self.fractal_type = tk.StringVar(master=self.root, value="Mandelbrot")
+
         self.center = 0 + 0j
         self.scale = 3.0
         self.julia_c = -0.4 + 0.6j
-
-        self.root = tk.Tk()
         self.root.title("Fractalizer")
         self.root.configure(bg="#ddf")
 
