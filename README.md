@@ -26,3 +26,12 @@ go run ./go-fractalizer
 ```
 
 Infrastructure to containerize and run the server using Pulumi is defined in `infra`.
+A sample stack configuration `Pulumi.dev.yaml` sets the port used by the container.
+You can deploy the stack with:
+
+```bash
+cd infra
+pulumi up
+```
+
+The port can be customized by editing the stack file or via `pulumi config set port <num>`.
