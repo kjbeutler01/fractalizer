@@ -1,0 +1,2 @@
+config:
+  fractalizer-go:port: 8080
